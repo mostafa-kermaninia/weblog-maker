@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>POSTS LIST</title>
+    </head>
+    <body>
+        <!--  اومديم گفتيم هر دفعه يسري اطلاعات جديد بياد اينجا،حالا مثلا براي پيمايش اطلاعات چه كنيم؟viewsدر اصل براي دايناميك كردن اين فايل،قبلا تو فايل -->
+        <!-- اينكارو كن: -->
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a href="/posts/{{ post.pk }}">
+                    {{ post.pk }} -- {{ post.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>POST DETAILS</title>
+    </head>
+    <body>
+        <!-- قوانين آدرس دادن
+        اگر خواستي يه فولدر بري عقبتر ،از دونقطه استفاده كن -->
+        <link rel="stylesheet" type="text/css" href="../../static/css/post_details_style.css" />
+
+        <!--  اومديم گفتيم هر دفعه يسري اطلاعات جديد بياد اينجا،حالا مثلا براي پيمايش اطلاعات چه كنيم؟viewsدر اصل براي دايناميك كردن اين فايل،قبلا تو فايل -->
+        <!-- اينكارو كن: -->
+
+
+        <!-- لود كردن عنوان پست -->
+        <h1 id="title">{{ selected_post.title }}</h1>
+
+        <!-- لود كردن متن پست -->
+        <p id="text">{{ selected_post.text }}</p>
+
+        <!-- لود كردن كامنت هاي مربوط به پست -->
+        <h3 id="comments_title">COMMENTS!!</h3>
+        <ul>
+            {% for comment in selected_comments %}
+                <li id="comments">{{ comment.text }} <br> and its the time :{{ comment.create_time }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- لود كردن دكمه ي برگشت به خانه -->
+        <a href="/house">
+            <button id="home_button"><= BACK TO HOMEPAGE</button>
+        </a>
+
+        <!-- لود كردن دكمه ي برگشت به ليست پست ها -->
+        <a href="/posts">
+            <button id="list_button">GO TO POST LIST =></button></a
+        >
+    </body>
+</html>

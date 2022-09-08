@@ -1,0 +1,48 @@
+/*post details استايل هاي صفحه ي  */
+
+/* استايل دهي به عنوان پست  */
+#title {
+    color: rgba(29, 0, 101, 0.833);
+    border: 2px solid rgb(0, 0, 0);
+    max-width: 50%;
+
+}
+/* استايل دهي به متن پست  */
+#text {
+    color: rgba(0, 101, 3, 0.833);
+    border: 1px solid rgb(0, 0, 0);
+    max-width: 50%;
+
+}
+/* استايل دهي به كامنت */
+#comments_title {
+    background-color: bisque;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    color: brown;
+    max-width: 50%;
+    /* براي اومدن عنوان به وسط صفحه مرورگر */
+    text-align: center;
+}
+#comments {
+    color: rgb(115, 14, 31);
+    font-size: medium;
+    /* اگر متن كامنت طولاني شد،از صفحه نزنه بيرون */
+    word-wrap: break-word;
+    /* كلِ باكس كامنت ها،حداكثر نصف صفحه رو بگيره */
+    max-width: 50%;
+}
+/* استايل دهي به دكمه بازگشت به صفحه اصلي  */
+#home_button {
+    font-size: x-large;
+    color: rgb(191, 11, 164);
+    width: 25%;
+
+}
+#list_button {
+    background-color: rgb(10, 26, 205);
+    font-size: x-large;
+    color: rgb(11, 191, 50);
+    width: 25%;
+
+}

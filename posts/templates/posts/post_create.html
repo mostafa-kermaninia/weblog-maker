@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE NEW POST!!</title>
+</head>
+<body>
+    <!-- action : براي اين صفحه مينويسي را اينجا هم مينويسيurls.pyاي كه تو فايلurlهمون  -->
+    <!-- method : وقتي دكمه ي فرم رو ميزنيم محتوا در قالب چه نوع ريكوئستي ارسال بشه -->
+    <form action="/posts/create/" method="POST">
+        <!-- ممكنه يه محتوايي يكي بده كه وليديشن رو رد كنه اما در اصل يه كوئري باشه كه ديتابيس رو پاك ميكنه،براي جلوگيري ازين مشكلاي امنيتي خط زير را ميذاري -->
+        {% csrf_token %}
+        <!--  و اون فرم مدنظر رو ميسازهformsخط زير رو كه بنويسي خودش ميره تو فايل -->
+        {{ selected_form.as_p }}
+        <!-- اينم دكمه ي سيو -->
+        <input type="submit" value="save">
+
+    </form>
+</body>
+</html>
